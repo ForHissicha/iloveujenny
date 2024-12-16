@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anniversary Surprise</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .button {
+      padding: 15px 25px;
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #ff7f7f;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ff5555;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .celebration {
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Button that triggers the message -->
+  <button class="button" id="clickButton">Click Me</button>
+
+  <!-- Hidden message, initially not shown -->
+  <div class="message hidden" id="message">
+    <p>Happy One year my dear Jenny</p>
+    <p>Thank you for everything in between these wonderful moments, Maya</p>
+  </div>
+
+  <!-- Confetti container (hidden initially) -->
+  <div class="celebration hidden" id="confetti"></div>
+
+  <!-- External Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    // Get elements
+    const button = document.getElementById('clickButton');
+    const message = document.getElementById('message');
+    const confettiContainer = document.getElementById('confetti');
+
+    // Show the message and confetti when the button is clicked
+    button.addEventListener('click', () => {
+      // Hide the b
